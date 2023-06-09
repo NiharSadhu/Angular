@@ -1,0 +1,22 @@
+<app-box *ngFor="let box of boxes" ></app-box>
+
+<!-- <form (submit)="addBox(sizeInput.value, contentsInput.value, labelCodeInput.value, recipientInput.value, weightInput.value)"> -->
+    <form>
+  <h2>Add a Box</h2>
+  <label for="sizeInput">Size:</label>
+  <input type="number" id="sizeInput" #sizeInput required>
+
+  <label for="contentsInput">Contents:</label>
+  <textarea id="contentsInput" #contentsInput required></textarea>
+
+  <label for="labelCodeInput">Shipping Label Code:</label>
+  <input type="text" id="labelCodeInput" #labelCodeInput required>
+
+  <label for="recipientInput">Recipient:</label>
+  <input type="text" id="recipientInput" #recipientInput>
+
+  <label for="weightInput">Weight:</label>
+  <input type="number" id="weightInput" #weightInput step="0.01" required>
+
+  <button type="submit">Add Box</button>
+</form>
